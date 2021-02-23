@@ -1,0 +1,53 @@
+-- Time left in the game before the finish 
+SELECT 
+game_clock,
+event_description
+ FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr`
+ WHERE 
+ season = 2014
+ AND home_name = 'Wildcats'
+ AND away_name = 'Fighting Irish'
+ AND points_scored is NOT NULL
+ 
+-- Points were scored in an event
+SELECT 
+points_scored,
+FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr`
+ WHERE 
+ season = 2014
+ AND home_name = 'Wildcats'
+ AND away_name = 'Fighting Irish'
+ AND points_scored is NOT NULL
+ 
+-- Name of the team who scored the points
+SELECT 
+team_name,
+event_description
+ FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr`
+ WHERE 
+ season = 2014
+ AND home_name = 'Wildcats'
+ AND away_name = 'Fighting Irish'
+ AND points_scored is NOT NULL
+ 
+-- Description about the event
+-- Time when the event occured
+SELECT 
+event_description
+ FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr`
+ WHERE 
+ season = 2014
+ AND home_name = 'Wildcats'
+ AND away_name = 'Fighting Irish'
+ AND points_scored is NOT NULL
+ -- Time when the event occurred
+SELECT 
+event_description
+ FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr`
+ WHERE 
+ season = 2014
+ AND home_name = 'Wildcats'
+ AND away_name = 'Fighting Irish'
+ AND points_scored is NOT NULL
+ ORDER BY 
+ timestamp DESC 
