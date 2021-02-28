@@ -1,0 +1,9 @@
+SELECT 
+xx.game_no
+,xx.game_id
+,xx.attendance
+,yy.gametime
+ FROM `bigquery-public-data.ncaa_basketball.mbb_pbp_sr` as xx
+ LEFT JOIN  `bigquery-public-data.ncaa_basketball.mbb_players_games_sr` as yy
+ON (xx.game_id = yy.game_id)
+LIMIT 10
